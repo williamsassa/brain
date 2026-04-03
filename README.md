@@ -8,7 +8,7 @@ Bilingue (English/French) | Medical specialties: Cardiology, Ophthalmology, Derm
 
 ### 1. Prerequisites
 - Node.js 18+, Python 3.9+
-- Firebase, Supabase, Anthropic, OpenAI accounts
+- Firebase, Supabase, OpenAI 
 
 ### 2. Installation & Setup
 
@@ -27,7 +27,6 @@ npm run dev
 cd python-services && pip install -r requirements.txt && python main.py
 ```
 
-Open [http://localhost:3000](http://localhost:3000)
 
 This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
 
