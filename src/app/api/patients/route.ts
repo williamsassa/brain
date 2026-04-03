@@ -1,13 +1,19 @@
 import { NextRequest, NextResponse } from 'next/server';
-import { createClient } from '@supabase/supabase-js';
+import { createClient, SupabaseClient } from '@supabase/supabase-js';
 
 export const runtime = 'nodejs';
 
-// Initialize Supabase client
-const supabase = createClient(
-  process.env.NEXT_PUBLIC_SUPABASE_URL || '',
-  process.env.SUPABASE_SERVICE_ROLE_KEY || ''
-);
+// Lazy-initialize Supabase client (avoids crash at build time)
+let _supabase: SupabaseClient | null = null;
+function getSupabase(): SupabaseClient {
+  if (!_supabase) {
+    _supabase = createClient(
+      process.env.NEXT_PUBLIC_SUPABASE_URL!,
+      process.env.SUPABASE_SERVICE_ROLE_KEY!
+    );
+  }
+  return _supabase;
+}
 
 interface Patient {
   id?: string;
@@ -34,7 +40,7 @@ async function verifyAuth(request: NextRequest): Promise<{ uid: string } | null>
     const token = authHeader.substring(7);
 
     // Verify with Supabase
-    const { data, error } = await supabase.auth.getUser(token);
+    const { data, error } = await getSupabase().auth.getUser(token);
 
     if (error || !data.user) {
       return null;
@@ -57,7 +63,7 @@ export async function GET(request: NextRequest) {
     }
 
     // Fetch patients for current doctor
-    const { data, error } = await supabase
+    const { data, error } = await getSupabase()
       .from('patients')
       .select('*')
       .eq('doctorId', auth.uid)
@@ -120,7 +126,7 @@ export async function POST(request: NextRequest) {
     }
 
     // Create patient record
-    const { data, error } = await supabase
+    const { data, error } = await getSupabase()
       .from('patients')
       .insert([
         {
