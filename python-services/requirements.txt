@@ -1,0 +1,11 @@
+fastapi
+uvicorn[standard]
+python-multipart
+pydantic
+dowhy
+pandas
+numpy
+scikit-learn
+networkx
+econml
+scipy

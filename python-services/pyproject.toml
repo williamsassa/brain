@@ -1,0 +1,11 @@
+[build-system]
+requires = ["setuptools", "wheel"]
+
+[project]
+name = "brain-health-causal-engine"
+version = "1.0.0"
+description = "BRAIN HEALTH Python Microservice - Causal Inference Engine"
+requires-python = ">=3.10"
+
+[tool.railway]
+startCommand = "uvicorn main:app --host 0.0.0.0 --port ${PORT:-8000}"
