@@ -1,10 +1,10 @@
-# 🧠 BRAIN HEALTH — Operation HELIX-FT
+#  BRAIN HEALTH — Operation HELIX-FT
 
 **AI-powered Diagnostic Assistant for Healthcare Professionals**
 
 Bilingue (English/French) | Medical specialties: Cardiology, Ophthalmology, Dermatology, Dentistry, Pediatrics, Psychiatry, Anesthesiology, Endocrinology, Oncology, Respiratory
 
-## 🚀 Quick Start
+## Quick Start
 
 ### 1. Prerequisites
 - Node.js 18+, Python 3.9+
