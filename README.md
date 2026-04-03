@@ -31,7 +31,7 @@ cd python-services && pip install -r requirements.txt && python main.py
 This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
 
 
-##  STRUCTURE DE FICHIERS
+## FILE STRUCTURE
 
 ```
 Brain-Health Project
@@ -81,7 +81,7 @@ Brain-Health Project
 
 ---
 
-##  SÉCURITÉ & DONNÉES
+##  SECURITY & DATA
 
 | Aspect | Status |
 |--------|--------|
@@ -97,21 +97,21 @@ Brain-Health Project
 ## FINAL CHECKLIST
 
 ```
-✓ 11/11 Spécialités créées avec formulaires
-✓ 16/16 Clés API présentes dans .env.local
-✓ 94 Questions cliniques pertinentes
-✓ 7 Types de widgets implémentés
-✓ Framer Motion animations complètes
-✓ Design System cohérent (Medical Cyan-Blue Theme)
-✓ Responsive mobile/tablet/desktop
-✓ TypeScript sans erreurs
-✓ Build production sans warnings
-✓ Persistent state avec Zustand + localStorage
-✓ Navigation fluide post-onboarding
-✓ Chat sidebar animations
-✓ Patient form checklist interactive
-✓ Dashboard professionnel avec logout
-✓ All 11 specialty forms imported and integrated
+✓ 11/11 Specialties created with forms  
+✓ 16/16 API keys present in .env.local  
+✓ 94 Relevant clinical questions  
+✓ 7 Types of widgets implemented  
+✓ Framer Motion complete animations  
+✓ Consistent Design System (Medical Cyan-Blue Theme)  
+✓ Responsive design for mobile/tablet/desktop  
+✓ TypeScript without errors  
+✓ Production build without warnings  
+✓ Persistent state with Zustand + localStorage  
+✓ Smooth navigation post-onboarding  
+✓ Chat sidebar animations  
+✓ Interactive patient form checklist  
+✓ Professional dashboard with logout  
+✓ All 11 specialty forms imported and integrated  
 ✓ Page footer status summary
 ```
 
